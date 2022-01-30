@@ -1,2 +1,6 @@
 const age = parseInt(prompt("How old are you?"));
-console.log(age)
+if (isNaN(age)) {
+    alert("Please write a number");
+} else {
+    alert("Thank you for writing your age");
+}
