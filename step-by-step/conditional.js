@@ -8,6 +8,8 @@ if (isNaN(age) || age < 0) {
     alert("You can drink!")
 } else if (age > 50 && age <= 80) {
     alert("You shold exercise 🚵‍♀️")
+} else if (age === 100) {
+    alert("Wow you're wise")
 } else if (age > 80) {
     alert("You can do whatever you want!")
 }
