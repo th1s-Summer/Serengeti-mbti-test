@@ -5,9 +5,15 @@ function clickEvent() {
     something.style.color = randomColor;
     console.log("something was clicked!");
 }
-something.addEventListener("click", clickEvent);
 
-function getRandom() {
-    return Math.round(Math.random() * 0xffffff).toString(16);
+function mouseEvent() {
+    something.innerText = "boooooo! mouse is here!";
 }
-console.log(getRandom());
+
+function mouseLeave() {
+    something.innerText = "bye bye- mouse is gone!";
+}
+
+something.addEventListener("click", clickEvent);
+something.addEventListener("mouseenter", mouseEvent);
+something.addEventListener("mouseleave", mouseLeave);
