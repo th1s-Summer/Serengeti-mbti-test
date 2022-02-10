@@ -1,14 +1,12 @@
-const h1 = document.querySelector("h1");
+const title = document.querySelector("h1");
 
-function changeColor() {
-    const currentColor = h1.style.color;
-    let setterColor;
-
-    if (currentColor === "green") {
-        setterColor = "blue";
+function titleEvent() {
+    const defaultClass = "";
+    if (title.className === defaultClass) {
+        title.className = "active";
     } else {
-        setterColor = "green";
+        title.className = defaultClass;
     }
-    h1.style.color = setterColor;
 }
-h1.addEventListener("click", changeColor);
+
+title.addEventListener("click", titleEvent);
