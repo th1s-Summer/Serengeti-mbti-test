@@ -1,12 +1,13 @@
 const title = document.querySelector("h1");
 
 function titleEvent() {
-    const defaultClass = "";
-    if (title.className === defaultClass) {
-        title.className = "active";
-    } else {
-        title.className = defaultClass;
-    }
+    // const defaultClass = "active";
+    // if (title.classList.contains(defaultClass)) {
+    //     title.classList.remove(defaultClass)
+    // } else {
+    //     title.classList.add(defaultClass)
+    // }
+    title.classList.toggle("active");
 }
 
 title.addEventListener("click", titleEvent);
