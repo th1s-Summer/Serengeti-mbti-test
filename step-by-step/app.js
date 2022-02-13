@@ -1,13 +1,10 @@
-const title = document.querySelector("h1");
+const loginInput = document.querySelector("#login-form input");
+const loginBtn = document.querySelector("#login-form button");
 
-function titleEvent() {
-    // const defaultClass = "active";
-    // if (title.classList.contains(defaultClass)) {
-    //     title.classList.remove(defaultClass)
-    // } else {
-    //     title.classList.add(defaultClass)
-    // }
-    title.classList.toggle("active");
+function loginBtnEvent() {
+    const value = loginInput.value;
+    if (value === "") {
+        alert("Please write your name")
+    }
 }
-
-title.addEventListener("click", titleEvent);
+loginBtn.addEventListener("click", loginBtnEvent);
