@@ -1,10 +1,15 @@
+const loginForm = document.querySelector("#login-form");
 const loginInput = document.querySelector("#login-form input");
-const loginBtn = document.querySelector("#login-form button");
+const title = document.querySelector("h1");
 
-function loginBtnEvent() {
-    const value = loginInput.value;
-    if (value === "") {
-        alert("Please write your name")
-    }
+const HIDDEN_CLASSNAME = "hidden";
+
+function onLoginSubmit(event) {
+    event.preventDefault();
+    loginForm.classList.add(HIDDEN_CLASSNAME);
+    const username = loginInput.value;
+    title.classList.remove(HIDDEN_CLASSNAME);
+    title.innerHTML = `hello ${username}`;
 }
-loginBtn.addEventListener("click", loginBtnEvent);
+
+loginForm.addEventListener("submit", onLoginSubmit);
